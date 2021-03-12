@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <a href="/Category/CookieCheck">Check Cookie</a>
+    <form method="post">
+        <table>
+            <tr>
+                <td>
+                    Category Name
+                </td>
+                <td>
+                    <input type="text" name="categoryName" value="@Model.CategoryName" />
+                </td>
+            </tr>
+            <tr>
+                <td>Category ID</td>
+                <td>
+                    <input type="text" name="categoryId" value="@Model.CategoryId" readonly/>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" name="edit" value="Done" />
+    </form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿
+@{ 
+    int? i = null;
+    int id;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <a href="/Product/AllProducts">All Products</a>
+    <a href="/Category/GetTopThree">Get top Three</a>
+    <h3>Categories</h3>
+    <table border="1" align="left">
+        <tr>
+            <td>Id</td>
+            <td>Category Name</td>
+        </tr>
+        @foreach(var data in Model)
+        {
+            <tr>
+                <td>@data.CategoryId</td>
+                <td>@data.CategoryName</td>
+                <td>
+                    @{ id =  data.CategoryId ;
+                        i = id;
+                        }
+                    <a href="/category/Edit/@data.CategoryId ">Edit</a>
+                </td>
+                <td>Add</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

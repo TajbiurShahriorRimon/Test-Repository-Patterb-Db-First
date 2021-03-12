@@ -1,0 +1,25 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetTopThree</title>
+</head>
+<body>
+    <table border="2" align="left">
+        <tr>
+            <td>Id</td>
+            <td>Category Name</td>
+        </tr>
+        @foreach (var data in Model)
+        {
+            <tr>
+                <td>@data.CategoryId</td>
+                <td>@data.CategoryName</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
