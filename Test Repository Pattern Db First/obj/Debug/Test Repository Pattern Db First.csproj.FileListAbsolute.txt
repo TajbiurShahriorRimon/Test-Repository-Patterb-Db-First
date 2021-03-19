@@ -51,3 +51,5 @@ D:\ASP Dot Net Projects\Test Repository Pattern Db First\Test Repository Pattern
 D:\ASP Dot Net Projects\Test Repository Pattern Db First\Test Repository Pattern Db First\obj\Debug\Test Repository Pattern Db First.csproj.CopyComplete
 D:\ASP Dot Net Projects\Test Repository Pattern Db First\Test Repository Pattern Db First\obj\Debug\Test Repository Pattern Db First.dll
 D:\ASP Dot Net Projects\Test Repository Pattern Db First\Test Repository Pattern Db First\obj\Debug\Test Repository Pattern Db First.pdb
+D:\ASP Dot Net Projects\Test Repository Pattern Db First\Test Repository Pattern Db First\bin\Newtonsoft.Json.dll
+D:\ASP Dot Net Projects\Test Repository Pattern Db First\Test Repository Pattern Db First\bin\Newtonsoft.Json.xml

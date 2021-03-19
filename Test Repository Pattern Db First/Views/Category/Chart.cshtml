@@ -1,0 +1,162 @@
+﻿@*@{
+        var myChart = new Chart(width: 1500, height: 400)
+           .AddTitle("Employees")
+           .AddSeries(chartType: "column",
+              xValue: new[] { "Peter", "Andrew", "Julie", "Mary", "Dave", "Peter", "Andrew", "Julie", "Mary", "Dave" },
+              yValues: new[] { "2", "6", "4", "5", "3", "2", "6", "4", "5", "3" })
+           .Write();
+    }*@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script>
+    window.onload = function () {
+
+    var chart = new CanvasJS.Chart("chartContainer", {
+    	animationEnabled: true,
+    	theme: "light2", // "light1", "dark1", "dark2"
+    	exportEnabled: true,
+    	title: {
+    		text: "Medals Won by Few Countries - 2016 Summer Olympics"
+    	},
+    	data: [{
+    		type: "column",
+    		dataPoints:  @Html.Raw(ViewBag.DataPoints)
+    	}]
+    });
+    chart.render();
+
+    }
+    </script>
+</head>
+<body>
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+</body>
+</html>
+
+<!--<script src="~/Scripts/chart/highcharts.js"></script>
+<script src="~/Scripts/chart/exporting.js"></script>
+<script src="~/Scripts/chart/export-data.js"></script>
+<script src="~/Scripts/chart/accessibility.js"></script>-->
+@*    <div class="jumbotron">
+
+    </div>*@
+
+<!--<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+        Pie charts are very popular for showing a compact overview of a
+        composition or comparison. While they can be harder to read than
+        column charts, they remain a popular choice for small datasets.
+    </p>
+</figure>
+
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+        Pie charts are very popular for showing a compact overview of a
+        composition or comparison. While they can be harder to read than
+        column charts, they remain a popular choice for small datasets.
+    </p>
+</figure>
+
+<script>
+    Highcharts.chart('container', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Browser market shares in January, 2018'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        accessibility: {
+            point: {
+                valueSuffix: '%'
+            }
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                }
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: 'Chrome',
+                y: 61.41,
+                sliced: true,
+                selected: true
+            }, {
+                name: 'Internet Explorer',
+                y: 11.84
+            }, {
+                name: 'Firefox',
+                y: 10.85
+            }, {
+                name: 'Edge',
+                y: 4.67
+            }, {
+                name: 'Safari',
+                y: 4.18
+            }, {
+                name: 'Sogou Explorer',
+                y: 1.64
+            }, {
+                name: 'Opera',
+                y: 1.6
+            }, {
+                name: 'QQ',
+                y: 1.2
+            }, {
+                name: 'Other',
+                y: 2.61
+            }]
+        }]
+    });
+</script>-->
+@*
+    <html>
+    <head>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            google.charts.load("current", { packages: ["corechart"] });
+            google.charts.setOnLoadCallback(drawChart);
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Task', 'Hours per Day'],
+                    ['Work', 11],
+                    ['Eat', 2],
+                    ['Commute', 2],
+                    ['Watch TV', 2],
+                    ['Sleep', 7]
+                ]);
+
+                var options = {
+                    title: 'My Daily Activities',
+                    is3D: true,
+                };
+
+                var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+                chart.draw(data, options);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    </body>
+    </html>
+*@

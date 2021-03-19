@@ -11,7 +11,8 @@ namespace Test_Repository_Pattern_Db_First.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Linq;
+
     public partial class Product
     {
         public int ProductId { get; set; }
@@ -20,5 +21,10 @@ namespace Test_Repository_Pattern_Db_First.Models
         public int CategoryId { get; set; }
     
         public virtual Category Category { get; set; }
+
+        public static explicit operator Product(List<IGrouping<int, Product>> v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
